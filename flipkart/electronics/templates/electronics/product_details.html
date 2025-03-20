@@ -78,7 +78,9 @@
             <h2>{{pro.name}}</h2>
             <p class="price">₹{{pro.price}}</p>
             <p>{{pro.description}}</p>
-            <button>Add to Cart</button>
+            <button>Add to Cart</button><br>
+            <a href = "{% url 'update_product' pro.id %}"><button style ="color : Green; background-color: Red;font-weight: bold;">Update Product</button></a>
+            <a href = "{% url 'delete_product' pro.id %}"><button style ="color : Red; background-color: Green;font-weight: bold;">Delete Product</button></a>
         </div>
         {% endfor %}
         <br> <br>

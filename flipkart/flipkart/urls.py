@@ -23,5 +23,5 @@ from electronics import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name = 'about'),
-    path('electronics/product/', views.product_details, name = 'Details')
+    path('electronics/',include('electronics.urls')),
 ]
